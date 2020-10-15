@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #fa521f6e;
+    --accent-color: #f08080;
+    --logo-font: 'Luckiest Guy', cursive;
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,13 +26,13 @@ main {
 
 footer {
     justify-content: center;
+    
 
 }
 
 header, footer {
-    height: 65px;
     display: flex;
-    background-color: dodgerblue;
+    background-color: var(--primary-color);
     color: white;
     align-items: center;
     height: 65px;
@@ -34,11 +41,30 @@ header, footer {
 
 header {
     padding-left: 25px;
+    font-family: var(--logo-font);
+    text-shadow: 1px 1px 5px var(--accent-color);
 }
 
-#recipes {
+.recipe {
     margin: 15px;
     height: 100px;
     width: 175px;
     text-transform: capitalize;
+}
+
+.recipe:hover {
+    background-color: lightgray;
+}
+
+form {
+    display: inline-block;
+    padding-left: 20px;
+}
+
+input {
+    height: 30px;
+}
+
+input:first-of-type {
+    width: 400px;
 }
