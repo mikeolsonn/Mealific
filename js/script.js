@@ -8,5 +8,3 @@ $.ajax(url + '?q=chicken&app_id=' + id + '&app_key=' + key)
 .then(error => console.log(error))
 };
 
-// 7b5d37d71ff0cd6ec5ff345da2707fd1
-// 4be09ebb
