@@ -6,16 +6,25 @@ const url = 'https://api.edamam.com/search'
 
 // Variables 
 
-let recipeData, userInput;
+let recipeData, userInput, recipeDetail;
 
 
 // Cached Element References
+const $image = $('#image');
+const $label = $('#label');
+const $health = $('#health');
+const $ingredients = $('#ingredients');
+const $instructions = $('#instructions');
+const $modal = $('#modal');
 
 const $recipeEl = $('#recipes');
 const $form = $('form');
 const $main = $('main');
 const $input = $('input[type="text"]');
+const $top = $('#top');
 
+const $h1 = $('h1');
+const $search = $('input[type="submit"]');
 
 
 // Event Listeners
@@ -24,7 +33,9 @@ $recipeEl.on('click', 'article', handleClick);
 
 $form.on('submit', handleGetData);
 
+// $top.on('click', render);
 
+// $search.on('click', userInput)
 
 // Functions
 
@@ -45,7 +56,7 @@ $.ajax(url + '?q=' + userInput + '&app_id=' + id + '&app_key=' + key)
 
 recipeData = data;
 render();
-
+console.log(data)
 }, 
 function(error) {
     console.log(error);
@@ -54,26 +65,42 @@ function(error) {
 
 
 function handleClick() {
-    console.log(this);
+const itemIndex = this.dataset.index;
+render(itemIndex);
+    // console.log(this);
 };
 
 
 
-function render() {
-    $recipeEl.html(generateRecipes());
-    // console.log(recipeData);
-    // console.log(generateRecipes());
-    // $image.attr({src: recipeData.image, alt: recipeData.label});
+function render(index) {
+  
+    const recipe = recipeData.hits[index];
 
-    // $label.text(recipeData.label);
+    if(recipe, index) {
+       
+        $label.text(`recipe: ${recipe.recipe.label}`);
+        $health.text(`${recipe.recipe.dietLabels}`);
+        $ingredients.text(`ingredients: ${recipe.recipe.ingredientLines}`);
+        $instructions.attr({href: recipe.recipe.url
+        }).text(`instructions`);
+        
+        $modal.modal(); 
+        
+        
+    } else {
+    $recipeEl.html(generateRecipes().slice(0, 9));
+    }
 };
+
+
     
 function generateRecipes() {
-    return recipeData.hits.map(function(food) {
+    return recipeData.hits.map(function(food, index) {
             return `
-            <article class="recipe outline flex-ctr">
+            <article class="recipe outline flex-ctr" data-index="${index}">
                 <img src="${food.recipe.image}" alt="${food.recipe.label}">
                 <h3>${food.recipe.label}</h3>
+                
             </article>
             `;
         });

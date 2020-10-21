@@ -2,6 +2,7 @@
     --primary-color: #fa521f6e;
     --accent-color: #f08080;
     --logo-font: 'Luckiest Guy', cursive;
+    --card-font: 'Dosis', sans-serif;
 }
 
 
@@ -18,53 +19,120 @@ body {
 }
 
 main {
-    display: flex;
+
     flex-grow: 1;
     flex-direction: column;
-    align-items: center;
+
 }
 
 footer {
     justify-content: center;
-    
-
-}
-
-header, footer {
-    display: flex;
     background-color: var(--primary-color);
+    display: flex;
+    
     color: white;
     align-items: center;
     height: 65px;
     width: 100%;
+
 }
 
-header {
+/* header, footer {
+    display: flex;
+    
+    color: white;
+    align-items: center;
+    height: 65px;
+    width: 100%;
+} */
+
+/* header {
     padding-left: 25px;
-    font-family: var(--logo-font);
+    
     text-shadow: 1px 1px 5px var(--accent-color);
+} */
+
+main > section {
+    
+    flex-wrap: wrap;
+    
+}
+
+.outline {
+    border: 1px var(--accent-color);
+}
+
+.flex-ctr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .recipe {
-    margin: 15px;
-    height: 100px;
-    width: 175px;
+    flex-direction: column;
+    color: #858383;
+    margin: 16px;
+    height: 250px;
+    width: 200px;
     text-transform: capitalize;
+    border-radius: 12px;
+    font-family: var(--card-font);
+    box-shadow: 1px 1px 1px 1px var(--accent-color);
 }
 
 .recipe:hover {
-    background-color: lightgray;
+    box-shadow: 1px 1px 15px 1px var(--accent-color);
+    background-color: lightgold;
+
+}
+
+.recipe > img {
+    height: 150px;
+    width: 150px;
+    margin: 0 0 30px 0;
 }
 
 form {
-    display: inline-block;
+    display: flex;
+    flex-direction:: row;
     padding-left: 20px;
 }
 
 input {
     height: 30px;
+    border-radius: 5px;
 }
 
 input:first-of-type {
     width: 400px;
+}
+input[type="submit"] {
+    margin-left: -60px;
+}
+
+#modal {
+   
+    min-height: 300px;
+    font-size: 20px;
+}
+
+h1 {
+    font-family: var(--logo-font);
+    font-size: 50px;
+    color: var(--primary-color);
+    margin: 20px 0 10px 0;
+}
+
+h1, form {
+    display: flex;
+    align-items: center;
+
+}
+
+div {
+    flex-direction: column;
+}
+
+#modal p {
+    padding: 10px;
 }
