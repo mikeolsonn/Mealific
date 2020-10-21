@@ -4,10 +4,9 @@ Many people struggle when planning meals.  Too many recipes call for ingredients
 
 ## Screenshots
 
-<img src="homepage.png" alt="Homepage">
-<img src="search.png" alt="Search">
-<img src="recipe-display.png" alt="Display">
-
+<img width="945" alt="homepage" src="https://user-images.githubusercontent.com/70924632/96664200-43a99300-1320-11eb-86c3-8235008ca211.png">
+<img width="940" alt="search" src="https://user-images.githubusercontent.com/70924632/96664206-4906dd80-1320-11eb-9119-973c2052eb8a.png">
+<img width="934" alt="recipe-display" src="https://user-images.githubusercontent.com/70924632/96664219-4dcb9180-1320-11eb-9d83-0f67a526bd43.png">
 
 ## Technologies Used
 
@@ -23,6 +22,7 @@ Many people struggle when planning meals.  Too many recipes call for ingredients
 ## Getting Started
 
 https://mealific.netlify.app/
+
 Type in any ingredient or number of ingredients and search.  The screen will display nine recipes at a time, incorporating each ingredient entered.  Click on a recipe to dislpay more information.
 
 

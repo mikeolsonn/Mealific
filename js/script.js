@@ -78,7 +78,7 @@ function render(index) {
 
     if(recipe, index) {
        
-        $label.text(`recipe: ${recipe.recipe.label}`);
+        $label.text(`${recipe.recipe.label}`);
         $health.text(`${recipe.recipe.dietLabels}`);
         $ingredients.text(`ingredients: ${recipe.recipe.ingredientLines}`);
         $instructions.attr({href: recipe.recipe.url
