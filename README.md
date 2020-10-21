@@ -4,9 +4,9 @@ Many people struggle when planning meals.  Too many recipes call for ingredients
 
 ## Screenshots
 
-![Homepage](homepage.png)
-![Search](search.png)
-![Display](recipe-display.png)
+<img src="homepage.png" alt="Homepage">
+<img src="search.png" alt="Search">
+<img src="recipe-display.png" alt="Display">
 
 
 ## Technologies Used
