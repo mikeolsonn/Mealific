@@ -22,6 +22,7 @@ Many people struggle when planning meals.  Too many recipes call for ingredients
     
 ## Getting Started
 
+(https://mikeolsonn.github.io/Mealific/)
 Type in any ingredient or number of ingredients and search.  The screen will display nine recipes at a time, incorporating each ingredient entered.  Click on a recipe to dislpay more information.
 
 
